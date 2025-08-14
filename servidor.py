@@ -721,9 +721,10 @@ def generar_informe():
 @app.route("/")
 def index():
     try:
-        return render_template("pagina.html")
+        return render_template("index.html")
     except Exception:
         return "<h3>Servidor Flask funcionando. Envia POST JSON a /generar</h3>"
 
 if __name__ == "__main__":
+
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT",5000)))
